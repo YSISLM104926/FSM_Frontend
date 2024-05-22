@@ -51,7 +51,6 @@ type userType = {
 const Dashboard: React.FC<YourComponentProps> = () => {
   const [token, setToken] = useState<string | null>(null);
   const [userEmail, setUserEmail] = useState<string | null>(null);
-  const [userName, setUserName] = useState<string | null>(null);
   useEffect(() => {
     const accessToken: string | null = localStorage.getItem('Token');
     if (accessToken) {
@@ -61,9 +60,8 @@ const Dashboard: React.FC<YourComponentProps> = () => {
 
   useEffect(() => {
     if (token) {
-      const { email, name }: userType = jwtDecode(token);
+      const { email}: userType = jwtDecode(token);
       setUserEmail(email);
-      setUserName(name);
     }
   }, [token]);
   return (

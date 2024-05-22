@@ -2,9 +2,6 @@ import { useForm, SubmitHandler } from "react-hook-form"
 import Navbar from "./Navbar";
 import { useSubmitVolunteerDataMutation } from "../redux/features/VolunteerApi/volunteer.api";
 import { toast } from "sonner";
-import { useEffect, useState } from "react";
-import { jwtDecode } from "jwt-decode";
-import axios from "axios";
 
 type FormValues = {
     email: string
@@ -12,10 +9,7 @@ type FormValues = {
     location: string;
 }
 
-type userType = {
-    name: string;
-    email: string;
-}
+
 
 interface VolunteerResponse {
      data : {

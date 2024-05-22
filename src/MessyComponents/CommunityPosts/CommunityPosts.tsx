@@ -2,7 +2,6 @@ import { useForm, SubmitHandler } from "react-hook-form"
 import { useEffect, useState } from "react";
 import { useSubmitCommunityCommentMutation } from "../../redux/features/CommunityComment/CommunityComment";
 import { toast } from "sonner";
-import Navbar from "../Navbar";
 import { jwtDecode } from "jwt-decode";
 
 type FormValues = {
