@@ -41,7 +41,7 @@ const CreateSupply = () => {
                 console.log(supp);
 
                 try {
-                    const res = await fetch('http://localhost:5000/supplies', {
+                    const res = await fetch('https://fsm-backend.vercel.app/supplies', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
